@@ -442,9 +442,10 @@ body {
   position: sticky;
   height: 100vh;
   text-align: center;
-  width: 1200px;
+  width: 100%;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 .dis_table {
   position: relative;
@@ -456,16 +457,20 @@ body {
   display: table-cell;
   width: 100%;
   height: 100%;
+  vertical-align: middle;
 }
-.suggestion01 {
+.title .suggestion01 {
   width: 1200px;
   position: relative;
+  margin: auto;
 }
 .suggestion01 .tit {
   font-size: 100px;
   font-weight: 400;
   font-family: 'Dela Gothic One';
-  height: 132px;
+  height: 108px;
+  position: relative;
+  filter: blur(4px);
 }
 .tit .block01 {
   margin-right: 30px;
@@ -476,6 +481,16 @@ body {
   position: absolute;
   right: 0;
 }
-.blank01 {
+.title_set .inner_txt {
+  margin-top: 60px;
+}
+.inner_txt .item01 {
+  font-size: 3.0rem;
+  font-weight: 600;
+  line-height: 4.0rem;
+}
+
+.blankEl {
+  width: 100%;
   height: 100vh;
 }

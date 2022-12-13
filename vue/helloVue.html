@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vue</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+</head>
+
+<body>
+  <div id="main">
+    <!-- sTitle 값을 받아서 HTML의 엘리먼트 값으로 변환하여 표시함 -->
+    <p>{{ sTitle }}</p>
+    <p>{{ sContent }}</p>
+  </div>
+  <div id="App">
+    <p>{{ sTitle2 }}</p>
+    <p>{{ sContent2 }}</p>
+  </div>
+  <script>
+    // Vue 객체를 생성하여 앱을 초기화하고 시작함
+    new Vue({
+      el: '#main', // id 선택자인 'main'의 div 엘리먼트와 앱을 연동시켜 구동
+
+      data: {
+        // {{sTitle}} 로 데이터 값을 전달함
+        sTitle: 'Hello World!',
+        sContent: '임의의 텍스트1'
+
+        // 문제1 sContent라는 항목을 추가하고 임의 텍스트 출력
+        // 문제2 sTitle2와 sContent2라는 항목을 App 요소 안에서 출력
+      }
+    });
+    new Vue({
+      el: '#App',
+      data: {
+        sTitle2: 'Vue.js',
+        sContent2: '임의의 텍스트2'
+      }
+    });
+
+  </script>
+</body>
+
+</html>

@@ -69,6 +69,7 @@ body {
   font-size: 16px;
 }
 .wrap {
+  width: 100%;
   min-width: 1280px;
 }
 .wh {
@@ -79,6 +80,9 @@ body {
 }
 .blind {
   text-indent: -9999px;
+}
+.bold {
+  font-weight: 700;
 }
 
 
@@ -431,6 +435,7 @@ body {
   line-height: 1.3em;
 }
 
+/* cont02 */
 .cont02 {
   width: 100%;
   /* height: 100vh; */
@@ -493,4 +498,99 @@ body {
 .blankEl {
   width: 100%;
   height: 100vh;
+}
+
+/* cont03 */
+.wrap_cont03 {
+  height: 100%;
+}
+.cont03 {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 700;
+  padding: 0 160px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.itm {
+  box-sizing: border-box;
+  width: 100%;
+}
+/* item01 */
+.cont03 .item01 {
+  width: 900px;
+  height: 700px;
+  background: url(../images/cont03_img01.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 10;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 300px;
+}
+.cont03 .item01 .p1 {
+  line-height: 1.2em;
+  font-size: 40px;
+}
+.cont03 .item01 .p2 {
+  line-height: 1.2em;
+  font-size: 80px;
+}
+.item01 .para2 {
+  text-align: end;
+}
+/* item02 */
+.cont03 .item02 {
+  text-align: right;
+  width: 900px;
+  height: 700px;
+  background: url(../images/cont03_img02.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 10;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 320px auto;
+}
+.cont03 .item02 .para1 .p1 {
+  font-size: 80px;
+  line-height: 1.2em;
+}
+.cont03 .item02 .para1 .p2 {
+  font-size: 40px;
+}
+.cont03 .item02 .para2 .p1 {
+  font-size: 40px;
+}
+
+
+/* item03 */
+.cont03 .item03 {
+  width: 900px;
+  height: 700px;
+  background: url(../images/cont03_img03.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 10;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 320px;
+}
+
+/* item04 */
+.cont03 .item04 {
+  width: 900px;
+  height: 700px;
+  background: url(../images/cont03_img04.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 10;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 auto auto;
 }

@@ -1,4 +1,4 @@
-const cont01bg = document.querySelector('.cont1 .content')
+const cont01bg = document.querySelector('.cont01 .content')
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -6,33 +6,29 @@ const tl = gsap.timeline();
 tl.to('.line01', {
   scrollTrigger: {
     trigger: '.cont01',
-    start: '50px top',
+    start: 'top top',
     end: 'top top',
-    scrub: '1',
+    scrub: '0.5',
   },
-  duration: 0.7,
   y: 0,
 }).to('.line2', {
   scrollTrigger: {
     trigger: '.cont01',
-    start: '50px top',
+    start: 'top top',
     end: 'top top',
-    scrub: '1',
+    scrub: '0.5',
   },
-  duration: 0.7,
-  delay: 0.3,
   y: 0,
 });
-
-
-gsap.to('.cont01 .content', {
+gsap.to(cont01bg, {
   scrollTrigger: {
     trigger: ".cont01",
-    start: "top top",
-    end: "bottom bottom",
+    start: "50%",
+    end: "50%",
     scrub: "true",
-    markers: 'true'
+    // markers: 'true'
   },
+  className: "content fixed"
 });
 gsap.to(".bg02", {
   scrollTrigger: {
@@ -76,3 +72,24 @@ gsap.to(".min", {
   ease: "none"  ,
   duration: 3
 });
+tl.to('.suggestion01', {
+  scrollTrigger: {
+    trigger: ".cont02",
+    start: 'top top',
+    end: 'top top',
+    markers: 'true',
+    scrub: '0.5'
+  },
+  opacity: 1,
+}).to('.suggestion01', {
+  scrollTrigger: {
+    trigger: ".cont02",
+    start: 'top top',
+    end: 'top top',
+    scrub: '0.5'
+  },
+  duration: 1.5,
+  delay: 0.5,
+  filter: 'blur(0)'
+});
+

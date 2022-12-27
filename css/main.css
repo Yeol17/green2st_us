@@ -94,6 +94,7 @@ body {
 }
 
 
+
 /* HEADER */
 /* .wrap_fixed {
   position: fixed;
@@ -349,6 +350,10 @@ body {
   top: 0;
   left: 0;
 }
+.cont01 .content.fixed {
+  position: fixed;
+}
+
 .content .bg02 {
   position: absolute;
   top: 0;
@@ -379,7 +384,7 @@ body {
   width: 925px;
 }
 .tit_set .tit {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   display: inline-block;
   /* position: relative; */
 }
@@ -438,11 +443,11 @@ body {
 .cont01 .txt {
   text-align: center;
   color: #fff;
-  font-size: 60px;
+  font-size: 3.0rem;
   font-weight: 700;
   display: inline-block;
   margin-left: 4%;
-  line-height: 1.3em;
+  line-height: 1.4em;
 }
 .cont01 .txt .line {
   overflow: hidden;
@@ -453,7 +458,7 @@ body {
 } 
 .cont01 .txt .line2 {
   transform: translateY(100%);
-  transition: all 0.7s 0.3 ease;
+  transition: all 0.7s 0.3s ease;
   
 }
 
@@ -464,11 +469,12 @@ body {
   background: #000;
   color: #fff;
   position: relative;
+  z-index: 1;
 }
 .cont02::before {
   content:"";
   background-color: #00aeef;
-  width: 100%;
+  width: 0;
   height: 100%;
   position: absolute;
   top: 0;
@@ -509,6 +515,8 @@ body {
   filter: blur(4px);
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0;
+  transition: all .6s ease;
 }
 .tit .block01 {
   margin-right: 30px;left: 0;
@@ -522,6 +530,7 @@ body {
   transform: translateX(-50%);
   font-size: 5.0rem;
   text-align: right;
+  opacity: 0;
 }
 .suggestion02 .block01 img {
   height: 93px;
@@ -541,13 +550,12 @@ body {
   font-size: 3.0rem;
   font-weight: 600;
   line-height: 4.0rem;
-
-}
-.inner_txt .itm.item01 {
   opacity: 0;
 }
-.inner_txt .itm.item02 {
+.inner_txt .itm.item01 {
   opacity: 1;
+}
+.inner_txt .itm.item02 {
   color: #666
 }
 .pointColor {
@@ -561,6 +569,8 @@ body {
 /* cont03 */
 .wrap_cont03 {
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 .cont03 {
   width: 100%;
@@ -775,6 +785,9 @@ body {
 .cont04 {
   height: 100vh;
   font-weight: 700;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
 }
 .cont04_inner {
   width: 100%;
@@ -844,6 +857,9 @@ body {
   height: 100%;
   padding: 150px 0;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background-color: #fbfbfb;
 }
 .cont05 .contents_wrap {
   width: calc(100% - 200px);
@@ -885,7 +901,7 @@ body {
   box-shadow: 0 0 8px 3px rgba(151, 151, 151, 0.3);
   border-radius: 14px;
   box-sizing: border-box;
-  background: rgba(247, 241, 229, 0.2);
+  background: #fff;
   padding: 100px 50px;
   color: #555;
   position: relative;
@@ -924,6 +940,8 @@ body {
 /* CONT06 */
 .cont06 {
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 .cont06 .container {
   color: #fff;
@@ -971,6 +989,8 @@ body {
   padding: 40px 0;
   background-color: #000;
   text-align: center;
+  z-index: 1;
+  position: relative;
 }
 .footer .logo_footer {
   width: 100px;

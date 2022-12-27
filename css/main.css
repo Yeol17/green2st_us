@@ -448,19 +448,14 @@ body {
   overflow: hidden;
 }
 .cont01 .txt .line01{
-  transition: all 0.6s ease;
+  transition: all 0.7s ease;
   transform: translateY(100%);
 } 
-.cont01 .txt .line02 {
-  transition-delay: 3s;
-  transition: all 0.6s 0.6s ease;
+.cont01 .txt .line2 {
   transform: translateY(100%);
+  transition: all 0.7s 0.3 ease;
   
 }
-.cont01 .txt .line01.show,
-.cont01 .txt .line02.show {
-  transform: translateY(0);
-} 
 
 /* cont02 */
 /* 배경색 */

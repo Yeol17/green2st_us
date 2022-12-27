@@ -1,33 +1,39 @@
-let line = Array.from(document.querySelectorAll('.line > p'));
-
-window.addEventListener('scroll', _.throttle((e) => {
-  if (window.scrollY > 700) {
-    line.map((el) => {
-      el.classList.add('show');
-    });
-  } else if (window.scrollY < 400) {
-    line.map((el) => {
-      el.classList.remove('show');
-    });
-  }
-}, 300));
+const cont01bg = document.querySelector('.cont1 .content')
 
 gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to('.line01',{
-//   scrollTrigger: {
-//     trigger: ".cont01",
-//     start: "top center",
-//     end: "bottom center",
-//     scrub: "1",
-//     markers: "true",
-//   },
-//   yPercent: -100,
-//   opacity: 1,
-//   delay: 0.6,
-//   ease: "linear" 
+const tl = gsap.timeline();
+tl.to('.line01', {
+  scrollTrigger: {
+    trigger: '.cont01',
+    start: '50px top',
+    end: 'top top',
+    scrub: '1',
+  },
+  duration: 0.7,
+  y: 0,
+}).to('.line2', {
+  scrollTrigger: {
+    trigger: '.cont01',
+    start: '50px top',
+    end: 'top top',
+    scrub: '1',
+  },
+  duration: 0.7,
+  delay: 0.3,
+  y: 0,
+});
 
-// });
+
+gsap.to('.cont01 .content', {
+  scrollTrigger: {
+    trigger: ".cont01",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: "true",
+    markers: 'true'
+  },
+});
 gsap.to(".bg02", {
   scrollTrigger: {
     trigger: ".cont01",
@@ -70,5 +76,3 @@ gsap.to(".min", {
   ease: "none"  ,
   duration: 3
 });
-
-

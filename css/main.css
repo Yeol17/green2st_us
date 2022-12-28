@@ -252,7 +252,7 @@ body {
 /* shapes */
 .visual {
   height: 100vh;
-  background: url(../images/visual_bg.png) center no-repeat;
+  background: url(../images/visual_bg.png) center/cover no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -340,7 +340,6 @@ body {
 .cont01 {
   position: relative;
   height: 300vh;
-  /* background: #000; */
 }
 .cont01 .content {
   position: sticky;
@@ -702,19 +701,16 @@ body {
   height: 100vh;
 }
 .blank03 {
-  height: 120vh;
+  height: 150vh;
   position:relative;
 }
 /* ani_shape */
 .shapes_set {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
 }
 .shapes_set .item {
   position: absolute;
   transition: all 1.3s ease;
+  display: block;
 }
 .shapes_set .item01 {
   z-index: 20;

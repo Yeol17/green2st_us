@@ -1,5 +1,14 @@
+const pgNation = document.querySelector('.pagenation')
+const pgTitle = document.querySelector('.pg_title')
 const cont01bg = document.querySelector('.cont01 .content')
-
+const sug01 = document.querySelector('.suggestion01');
+const sug01_b01 = document.querySelector('.suggestion01 .block01');
+const sug01_b02 = document.querySelector('.suggestion01 .block02');
+const sug02 = document.querySelector('.suggestion02');
+const cont02 = document.querySelector('.cont02');
+const cont02Itm01 = document.querySelector('.cont02 .item01');
+const cont02Itm02 = document.querySelector('.cont02 .item02');
+const cont02Itm03 = document.querySelector('.cont02 .item03');
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
@@ -26,7 +35,6 @@ gsap.to(cont01bg, {
     start: "50%",
     end: "50%",
     scrub: "true",
-    // markers: 'true'
   },
   className: "content fixed"
 });
@@ -77,7 +85,6 @@ tl.to('.suggestion01', {
     trigger: ".cont02",
     start: 'top top',
     end: 'top top',
-    markers: 'true',
     scrub: '0.5'
   },
   opacity: 1,
@@ -89,7 +96,96 @@ tl.to('.suggestion01', {
     scrub: '0.5'
   },
   duration: 1.5,
-  delay: 0.5,
+  delay: 1,
   filter: 'blur(0)'
+});
+
+tl.to(sug01_b01, {
+  scrollTrigger: {
+    trigger: ".blank02",
+    start: '180px top',
+    end: '180px top',
+    scrub: '0.5',
+  },
+  filter: 'blur(4px)',
+  duration: 1,
+}).to(sug01_b01, {
+  scrollTrigger: {
+    trigger: ".blank02",
+    start: '180px top',
+    end: '180px top',
+    scrub: '0.5',
+  },
+  opacity: 0,
+});
+
+//climate 중앙 이동
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blank02",
+    start: 'top top',
+    end: 'top top',
+    scrub: '0.5',
+  }
+}).to(sug01_b01, {
+  opacity: 0,
+  fliter: 'blur(4px)'
+}).to(sug01_b02, {
+  left: '50%',
+  xPercent: -50,
+}).to(cont02Itm01, {
+  duration: 1,
+  opacity: 0
+}).to(cont02Itm02, {
+  opacity: 1
+});
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blank02",
+    start: 'bottom center',
+    end: 'bottom center',
+    scrub: '0.5',
+    markers: 'true'
+  }
+}).to(pgNation, {
+  opacity: 0
+}).to(pgTitle, {
+  opacity: 0
+});
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blank03",
+    start: 'top top',
+    end: 'top top',
+    scrub: '0.5',
+  }
+}).to(sug01, {
+  y: -10
+}).to(cont02Itm02, {
+  opacity: 0
+});
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blank03",
+    start: 'top top',
+    end: 'top top',
+    scrub: '0.5',
+  }
+}).to(sug01_b02, {
+  duration: 1,
+  delay: 3,  
+  left: '50%',
+  xPercent: -100,
+  scale: 0.7,
+  textAlign: 'left'
+}).to(cont02Itm03, {
+  opacity: 1,
+}).to(sug02, {
+  opacity: 1,
+}).to(cont02, {
+  className: 'cont02 show'
 });
 

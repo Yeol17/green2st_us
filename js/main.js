@@ -14,7 +14,6 @@ const btn_pg00 = document.querySelector('a[data-pg="0"]');
 const btn_pg01 = document.querySelector('a[data-pg="1"]');
 const btn_pg02 = document.querySelector('a[data-pg="2"]');
 const btn_pg03 = document.querySelector('a[data-pg="3"]');
-const btn_pg04 = document.querySelector('a[data-pg="4"]');
 const btn_pg05 = document.querySelector('a[data-pg="5"]');
 const btn_pg06 = document.querySelector('a[data-pg="6"]');
 
@@ -41,11 +40,11 @@ gsap.timeline({
     scrub: "0.5",
   }
 })
-.to(".line01", {
-  y: 0,
-}).to(".line2", {
-  y: 0,
-});
+  .to(".line01", {
+    y: 0,
+  }).to(".line2", {
+    y: 0,
+  });
 
 gsap.to(cont01bg, {
   scrollTrigger: {
@@ -63,7 +62,7 @@ gsap.to(".bg02", {
     end: "center",
     scrub: "true",
   },
-  opacity: 0 ,
+  opacity: 0,
   duration: 3
 });
 gsap.to(".bg03", {
@@ -73,7 +72,7 @@ gsap.to(".bg03", {
     end: "center center",
     scrub: "1",
   },
-  opacity: 0  ,
+  opacity: 0,
   duration: 3
 });
 gsap.to(".hour", {
@@ -83,8 +82,8 @@ gsap.to(".hour", {
     end: "center",
     scrub: "1",
   },
-  rotation: 60  ,
-  ease: "none"  ,
+  rotation: 60,
+  ease: "none",
   duration: 3
 });
 gsap.to(".min", {
@@ -118,19 +117,19 @@ gsap.timeline({
     scrub: "1"
   },
 })
-.to(".suggestion01", {
-  keyframes: [
-    {
-      opacity: 1
-    },
-    {
-      duration: 1.5,
-      delay: 1,
-      filter: "blur(0)"
-    },
-  ]
-  
-});
+  .to(".suggestion01", {
+    keyframes: [
+      {
+        opacity: 1
+      },
+      {
+        duration: 1.5,
+        delay: 1,
+        filter: "blur(0)"
+      },
+    ]
+
+  });
 gsap.timeline({
   scrollTrigger: {
     trigger: ".blank02",
@@ -191,28 +190,28 @@ gsap.timeline({
     scrub: "true",
   }
 })
-.to(pgTitle, {
-  className: "pg_title dn3"
-})
-.to(pgNation, {
-  className: "pagenation dp3"
-})
-.to(cont02Itm02, {
-  opacity: 0
-}).to(sug01_b02, {
-  keyframes: [
-    {y: -10},
-    {
-      delay: 1,
-      left: "50%",
-      xPercent: -100,
-      scale: 0.7,
-      textAlign: "left"
-    },
-  ]
-}).to(cont02, {
-  className: "cont02 show"
-});
+  .to(pgTitle, {
+    className: "pg_title dn3"
+  })
+  .to(pgNation, {
+    className: "pagenation dp3"
+  })
+  .to(cont02Itm02, {
+    opacity: 0
+  }).to(sug01_b02, {
+    keyframes: [
+      { y: -10 },
+      {
+        delay: 1,
+        left: "50%",
+        xPercent: -100,
+        scale: 0.7,
+        textAlign: "left"
+      },
+    ]
+  }).to(cont02, {
+    className: "cont02 show"
+  });
 
 gsap.timeline({
   scrollTrigger: {

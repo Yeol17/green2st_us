@@ -8,30 +8,45 @@ const sug02 = document.querySelector(".suggestion02");
 const cont02 = document.querySelector(".cont02");
 const cont02Itm01 = document.querySelector(".cont02 .item01");
 const cont02Itm02 = document.querySelector(".cont02 .item02");
-const cont02Itm03 = document.querySelector(".cont02 .item03");
-const shapesSet = Array.from(document.querySelectorAll('.shapes_set .item'));
-const shape01 = document.querySelector('.shapes_set .item01');
+const shapesSet = Array.from(document.querySelectorAll(".shapes_set .item"));
+
+const btn_pg00 = document.querySelector('a[data-pg="0"]');
+const btn_pg01 = document.querySelector('a[data-pg="1"]');
+const btn_pg02 = document.querySelector('a[data-pg="2"]');
+const btn_pg03 = document.querySelector('a[data-pg="3"]');
+const btn_pg04 = document.querySelector('a[data-pg="4"]');
+const btn_pg05 = document.querySelector('a[data-pg="5"]');
+const btn_pg06 = document.querySelector('a[data-pg="6"]');
 
 gsap.registerPlugin(ScrollTrigger);
+// pgTitle
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cont01",
+    start: "top 40%",
+    end: "top 40%",
+    scrub: "0.5",
+  }
+}).to(pgNation, {
+  className: "pagenation dp1"
+}).to(pgTitle, {
+  className: "pg_title dn1"
+})
 
-const tl = gsap.timeline();
-tl.to(".line01", {
+gsap.timeline({
   scrollTrigger: {
     trigger: ".cont01",
     start: "top top",
     end: "top top",
     scrub: "0.5",
-  },
+  }
+})
+.to(".line01", {
   y: 0,
 }).to(".line2", {
-  scrollTrigger: {
-    trigger: ".cont01",
-    start: "top top",
-    end: "top top",
-    scrub: "0.5",
-  },
   y: 0,
 });
+
 gsap.to(cont01bg, {
   scrollTrigger: {
     trigger: ".cont01",
@@ -82,43 +97,57 @@ gsap.to(".min", {
   rotation: 270,
   duration: 3
 });
-tl.to(".suggestion01", {
+gsap.timeline({
   scrollTrigger: {
     trigger: ".cont02",
-    start: "top top",
-    end: "top top",
+    start: "top 40%",
+    end: "top 40%",
     scrub: "1"
   },
-  opacity: 1,
-}).to(".suggestion01", {
-  scrollTrigger: {
-    trigger: ".cont02",
-    start: "top top",
-    end: "top top",
-    scrub: "1"
-  },
-  duration: 1.5,
-  delay: 1,
-  filter: "blur(0)"
+}).to(pgNation, {
+  className: "pagenation dp2"
+}).to(pgTitle, {
+  className: "pg_title dn2"
 });
 
-tl.to(sug01_b01, {
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cont02",
+    start: "top top",
+    end: "top top",
+    scrub: "1"
+  },
+})
+.to(".suggestion01", {
+  keyframes: [
+    {
+      opacity: 1
+    },
+    {
+      duration: 1.5,
+      delay: 1,
+      filter: "blur(0)"
+    },
+  ]
+  
+});
+gsap.timeline({
   scrollTrigger: {
     trigger: ".blank02",
     start: "top top",
     end: "top top",
     scrub: "1",
-  },
-  filter: "blur(4px)",
-  duration: 1,
+  }
 }).to(sug01_b01, {
-  scrollTrigger: {
-    trigger: ".blank02",
-    start: "top top",
-    end: "top top",
-    scrub: "1",
-  },
-  opacity: 0,
+  keyframes: [
+    {
+      filter: "blur(4px)",
+      duration: 1,
+    },
+    {
+      opacity: 0,
+    }
+  ]
 });
 
 //climate 중앙 이동
@@ -149,9 +178,9 @@ gsap.timeline({
     scrub: "0.5",
   }
 }).to(pgNation, {
-  opacity: 0
+  className: "pagenation hide"
 }).to(pgTitle, {
-  opacity: 0
+  className: "pg_title hide"
 });
 
 gsap.timeline({
@@ -159,87 +188,125 @@ gsap.timeline({
     trigger: ".blank03",
     start: "top top",
     end: "top top",
-    scrub: "0.5",
-    markers: "true"
+    scrub: "true",
   }
-}).to(sug01, {
-  y: -10
-}).to(cont02Itm02, {
+})
+.to(pgTitle, {
+  className: "pg_title dn3"
+})
+.to(pgNation, {
+  className: "pagenation dp3"
+})
+.to(cont02Itm02, {
   opacity: 0
-});
-
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".blank03",
-    start: "top top",
-    end: "top top",
-    scrub: "1",
-  }
 }).to(sug01_b02, {
-  duration: 1,
-  delay: 3,  
-  left: "50%",
-  xPercent: -100,
-  scale: 0.7,
-  textAlign: "left"
-}).to(cont02Itm03, {
-  opacity: 1,
-}).to(sug02, {
-  opacity: 1,
+  keyframes: [
+    {y: -10},
+    {
+      delay: 1,
+      left: "50%",
+      xPercent: -100,
+      scale: 0.7,
+      textAlign: "left"
+    },
+  ]
 }).to(cont02, {
   className: "cont02 show"
-})
-.to(shapesSet[0], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[1], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[2], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[6], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[4], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[5], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[6], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[7], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[8], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[9], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[10], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[11], {
-  x: 0,
-  y: 0
-})
-.to(shapesSet[12], {
-  x: 0,
-  y: 0
-})
+});
 
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cont04",
+    start: "top 40%",
+    end: "top 40%",
+    scrub: "1",
+    markers: "true"
+  }
+}).to(pgTitle, {
+  className: "pg_title dn4"
+}).to(pgNation, {
+  className: "pagenation dp4"
+});
 
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cont05",
+    start: "top 40%",
+    end: "top 40%",
+    scrub: "0.5"
+  }
+}).to(pgTitle, {
+  className: "pg_title dn5"
+}).to(pgNation, {
+  className: "pagenation dp5"
+});
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cont06",
+    start: "top 40%",
+    end: "top 40%",
+    scrub: "0.5"
+  }
+}).to(pgTitle, {
+  className: "pg_title dn6"
+}).to(pgNation, {
+  className: "pagenation dp6"
+});
+
+btn_pg00.addEventListener('click', (e) => {
+  gsap.to(window, {
+    scrollTo: {
+      duration: 1,
+      y: ".visual"
+    }
+  })
+});
+btn_pg01.addEventListener('click', (e) => {
+  gsap.to(window, {
+    scrollTo: {
+      duration: 1,
+      y: ".cont01"
+    }
+  })
+});
+btn_pg02.addEventListener('click', (e) => {
+  gsap.to(window, {
+    scrollTo: {
+      duration: 1,
+      y: ".cont02"
+    }
+  })
+});
+btn_pg03.addEventListener('click', (e) => {
+  gsap.to(window, {
+    scrollTo: {
+      duration: 1,
+      y: ".blank03"
+    }
+  })
+});
+btn_pg04.addEventListener('click', (e) => {
+  gsap.to(window, {
+    scrollTo: {
+      duration: 1,
+      y: ".cont04"
+    }
+  })
+});
+btn_pg05.addEventListener('click', (e) => {
+  gsap.to(window, {
+    scrollTo: {
+      duration: 1,
+      y: ".cont05"
+    }
+  })
+});
+btn_pg06.addEventListener('click', (e) => {
+  gsap.to(window, {
+    scrollTo: {
+      duration: 1,
+      y: ".cont06"
+    }
+  })
+});

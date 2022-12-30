@@ -1,30 +1,19 @@
 /* reset */
 a,
-address,
 body,
 div,
-fieldset,
-figcaption,
-figure,
 footer,
-form,
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 header,
 html,
 img,
-label,
-legend,
 li,
 main,
 p,
-q,
 span,
-tfoot,
 ol,
 ul,
 var {
@@ -52,7 +41,6 @@ body {
   line-height: 1;
 }
 
-menu,
 ol,
 ul {
   list-style: none
@@ -72,7 +60,7 @@ body {
 
 .wrap {
   width: 100%;
-  min-width: 1280px;
+  /* overflow-x: hidden; */
 }
 
 .wh {
@@ -105,17 +93,15 @@ body {
 
 
 /* HEADER */
-/* .wrap_fixed {
-  position: fixed;
-} */
+
 /* logo */
 .logo a {
   display: block;
   width: 94px;
   height: 50px;
   position: fixed;
-  top: 35px;
-  left: 35px;
+  top: 2%;
+  left: 1%;
   background: url(../images/logo_sm_wh.png) no-repeat center;
   z-index: 100;
 }
@@ -129,11 +115,10 @@ body {
   top: 50%;
   margin-top: -24px;
   font-weight: 800;
-  left: 32px;
+  left: 1.5%;
   opacity: 0;
   transform:
     translateX(-50%) rotate(90deg);
-
 }
 
 .pg_title.dn0,
@@ -204,9 +189,8 @@ body {
 /* pagenation */
 .pagenation {
   position: fixed;
-  /* width:42px; */
   top: 50%;
-  right: 30px;
+  right: 1%;
   z-index: 90;
   transform: translateY(-50%);
   transition: all 0.3s ease;
@@ -345,53 +329,55 @@ body {
 
 .shapes img {
   position: absolute;
+  z-index: 10;
 }
 
 .lefttop {
   top: 0;
   left: 0;
-  height: 98%;
-  z-index: 10;
+  width: 34%;
 }
 
 .leftbottom {
   bottom: 0;
   left: 0;
-  height: 80%;
-  z-index: 10;
+  width: 31%;
 }
 
 .righttop {
   top: 0;
   right: 0;
-  height: 98%;
-  z-index: 10;
+  width: 30%;
 }
 
 .rightbottom {
   bottom: 0;
   right: 0;
-  height: 56%;
-  z-index: 10;
+  width: 35%;
 }
 
 /* title */
 .visual .tit {
   position: relative;
   text-align: center;
-  top: 27%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 20;
 }
 
 .visual .subtitle {
+  line-height: 1.2em;
   font-size: 1.6rem;
-  margin-bottom: 30px;
   color: #fff;
   font-weight: 900;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
 .tit>p>img {
-  height: 320px;
+  width: 34%;
 }
 
 /* deco */
@@ -399,37 +385,37 @@ body {
   position: absolute;
   top: 4%;
   left: 24%;
-  height: 26vh;
+  width: 14%;
   z-index: 20;
 }
 
 .el_sun {
   position: absolute;
-  top: 100px;
-  right: 290px;
+  top: 8%;
+  right: 15%;
   z-index: 20;
 }
 
 .el_trees1 {
   position: absolute;
-  bottom: -20px;
+  bottom: -2%;
   left: 33%;
   transform: scaleX(-1);
 }
 
 .el_trees2 {
   position: absolute;
-  bottom: -10px;
+  bottom: -1%;
   left: 44%;
-  height: 230px;
+  width: 12%;
   transform: scaleX(-1);
 }
 
 .el_trees3 {
   position: absolute;
-  bottom: -8px;
-  right: 36vw;
-  height: 120px;
+  bottom: -1%;
+  right: 30%;
+  width: 8%;
 }
 
 /* CONT01 */
@@ -443,7 +429,7 @@ body {
   overflow: hidden;
   height: 100vh;
   width: 100%;
-  background: url(../images/cont1_bg01.jpg) no-repeat center/cover;
+  background: url(../images/cont1_bg01.png) no-repeat center/cover;
   top: 0;
   left: 0;
 }
@@ -475,7 +461,7 @@ body {
 }
 
 .tit_set {
-  position: relative;
+  position: absolute;
   left: 6%;
   top: 18%;
   z-index: 40;
@@ -487,7 +473,6 @@ body {
 .tit_set .tit {
   margin-bottom: 50px;
   display: inline-block;
-  /* position: relative; */
 }
 
 .tit_set .tit img {
@@ -500,7 +485,6 @@ body {
   height: 150px;
   top: 2.5%;
   left: 40.5%;
-  /* transform: translateX(-50%); */
 }
 
 .clock .hour {
@@ -573,7 +557,6 @@ body {
 }
 
 /* cont02 */
-/* 배경색 */
 .cont02 {
   width: 100%;
   background: #000;
@@ -714,7 +697,6 @@ body {
 .inner_txt .itm.item03 {
   opacity: 0;
   font-size: 4.0rem;
-  /* line-height: ; */
 }
 
 .pointColor {
@@ -857,7 +839,6 @@ body {
 }
 
 /* ani_shape */
-.shapes_set {}
 
 .shapes_set .item {
   position: absolute;
@@ -867,7 +848,7 @@ body {
 
 .cont02.show .shapes_set .item {
   transform: translate(0%, 0%);
-  transition: all 1.5s 2s ease;
+  transition: all 1.5s 1s ease;
 }
 
 .shapes_set .item01 {
@@ -889,7 +870,7 @@ body {
   z-index: 10;
   top: 0;
   left: 20%;
-  transform: rotateY(180deg);
+  transform: rotateY(90deg);
   transform: translate(0%, -100%);
 
 }
@@ -1093,7 +1074,6 @@ body {
 .howToList {
   display: flex;
   width: 66.6%;
-  /* overflow: hidden; */
 }
 
 .howToList .item {
@@ -1214,4 +1194,151 @@ body {
 .copy {
   color: #666;
   margin-top: 20px;
+}
+
+/* 테블릿 */
+@media all and (min-width:768px) and (max-width:1023px) {
+  
+  .logo a {
+    top: 1%;
+    left: 1%;
+  }
+  
+  /* VISUAL */
+
+  /* shapes */
+  .lefttop {
+    width: 50%;
+  }
+  .leftbottom {
+    width: 46%;
+  }
+  .righttop {
+    width: 38%;
+  }
+  .rightbottom {
+    width: 58%;
+  }
+
+  /* title */
+
+  .visual .subtitle {
+    font-size: 1.3rem;
+    
+  }
+  .res-block {
+    display: block;
+  }
+  .tit>p>img {
+    width: 40%;
+  }
+
+  /* deco */
+  .deco .el_earth {
+    top: 6%;
+    left: 28%;
+    width: 18%;
+  }
+  .el_sun {
+    top: 8%;
+    right: 18%;
+    width: 16%;
+  }
+  .el_trees1 {
+    opacity: 0;
+  }
+  .el_trees2 {
+    width: 16%;
+  }
+  .el_trees3 {
+    bottom: 4%;
+    right: 0;
+    width: 16%;
+  }
+
+  /* CONT01 */
+  .cont01 .content {
+    background: url(../images/cont1_bg01_tablet.jpg) no-repeat center/cover;
+  }
+  .content .bg02 {
+    background: url(../images/cont1_bg02_tablet.jpg) no-repeat center/cover;
+  }
+  .content .bg03 {
+    background: url(../images/cont1_bg03_tablet.jpg) no-repeat center/cover;
+  }
+}
+
+/* 모바일 */
+@media all and (max-width:767px) {
+
+  .logo a {
+    top: 1%;
+    left: 1%;
+  }
+
+  .wrap_fixed .pg_title {
+    left: 2.5%;
+  }
+
+  /* VISUAL */
+  
+  /* shapes */
+  .lefttop {
+    width: 50%;
+  }
+  .leftbottom {
+    width: 50%;
+  }
+  .righttop {
+    width: 35%;
+  }
+  .rightbottom {
+    width: 68%;
+  }
+
+  /* title */
+  .visual .subtitle {
+    font-size: 1.0rem;
+  }
+  .res-block {
+    display: block;
+  }
+  .tit>p>img {
+    width: 50%;
+  }
+
+  /* deco */
+  .deco .el_earth {
+    top: 4%;
+    left: 30%;
+    width: 18%;
+  }
+  .el_sun {
+    top: 6%;
+    right: 18%;
+    width: 16%;
+  }
+
+  .el_trees1 {
+    opacity: 0;
+  }
+
+  .el_trees2 {
+    opacity: 0;
+  }
+  .el_trees3 {
+    bottom: 6%;
+    right: 0;
+    width: 18%;
+  }
+/* CONT01 */
+.cont01 .content {
+  background: url(../images/cont1_bg01_mobile.jpg) no-repeat center/cover;
+}
+.content .bg02 {
+  background: url(../images/cont1_bg02_mobile.jpg) no-repeat center/cover;
+}
+.content .bg03 {
+  background: url(../images/cont1_bg03_mobile.jpg) no-repeat center/cover;
+}
 }

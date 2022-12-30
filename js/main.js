@@ -14,6 +14,7 @@ const btn_pg00 = document.querySelector('a[data-pg="0"]');
 const btn_pg01 = document.querySelector('a[data-pg="1"]');
 const btn_pg02 = document.querySelector('a[data-pg="2"]');
 const btn_pg03 = document.querySelector('a[data-pg="3"]');
+const btn_pg04 = document.querySelector('a[data-pg="4"]');
 const btn_pg05 = document.querySelector('a[data-pg="5"]');
 const btn_pg06 = document.querySelector('a[data-pg="6"]');
 
@@ -30,7 +31,7 @@ gsap.timeline({
   className: "pagenation dp1"
 }).to(pgTitle, {
   className: "pg_title dn1"
-})
+});
 
 gsap.timeline({
   scrollTrigger: {
@@ -39,12 +40,11 @@ gsap.timeline({
     end: "top top",
     scrub: "0.5",
   }
-})
-  .to(".line01", {
-    y: 0,
-  }).to(".line2", {
-    y: 0,
-  });
+}).to(".line01", {
+  y: 0,
+}).to(".line2", {
+  y: 0,
+});
 
 gsap.to(cont01bg, {
   scrollTrigger: {
@@ -213,13 +213,13 @@ gsap.timeline({
     className: "cont02 show"
   });
 
+// PAGENATION
 gsap.timeline({
   scrollTrigger: {
     trigger: ".cont04",
     start: "top 40%",
     end: "top 40%",
     scrub: "1",
-    markers: "true"
   }
 }).to(pgTitle, {
   className: "pg_title dn4"

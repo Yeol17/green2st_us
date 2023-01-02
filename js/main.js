@@ -309,3 +309,19 @@ btn_pg06.addEventListener('click', (e) => {
     }
   })
 });
+
+// SWIPER
+const swiper = new Swiper('.swiper ', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  pagination: true,
+  autoplay: {
+    delay: 2000
+  }
+});

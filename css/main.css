@@ -35,7 +35,9 @@ section {
 [hidden] {
   display: none
 }
-
+html {
+  min-width: 520px;
+}
 body {
   overflow-x: hidden;
   font-family: 'Pretendard';
@@ -57,11 +59,13 @@ a {
 body {
   color: #333;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .wrap {
   width: 100%;
-  /* overflow-x: hidden; */
+  max-width: 1920px;
+  min-width: 520px;
 }
 
 .wh {
@@ -430,13 +434,14 @@ body {
 .cont01 {
   position: relative;
   height: 300vh;
+  width: 100%;
 }
 
 .cont01 .content {
   position: sticky;
   overflow: hidden;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background: url(../images/cont1_bg01.png) no-repeat center/cover;
   top: 0;
   left: 0;
@@ -444,6 +449,8 @@ body {
 
 .cont01 .content.fixed {
   position: fixed;
+  display: flex;
+  justify-content: center;
 }
 
 .content .bg02 {
@@ -657,7 +664,7 @@ body {
 
 .title .suggestion02 {
   width: 1000px;
-  height: 108px;
+  /* height: 108px; */
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -872,7 +879,7 @@ body {
 
 .shapes_set .item04 {
   z-index: 20;
-  top: 6%;
+  top: 5%;
   right: 20.5%;
   transform: translate(50%, -200%);
 }
@@ -1318,7 +1325,7 @@ body {
 }
 
 /* 테블릿 */
-@media all and (min-width:768px) and (max-width:1023px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
 
   .logo a {
     top: 1%;
@@ -1485,13 +1492,13 @@ body {
   .title .suggestion01 {
     width: 768px;
     font-size: 4rem;
-    height: 80px;
+    /* height: 80px; */
   }
 
   .title .suggestion02 {
     width: 680px;
-    font-size: 2.9rem;
-    height: 80px;
+    font-size: 3rem;
+    /* height: 80px; */
     line-height: 1em;
   }
 
@@ -1642,7 +1649,7 @@ body {
 }
 
 /* 모바일 */
-@media all and (max-width:767px) {
+@media screen and (max-width:767px) {
 
   .logo a {
     top: 1%;
@@ -1748,6 +1755,8 @@ body {
 
   /* CONT01 배경 */
   .cont01 .content {
+    display: flex;
+    justify-content: center;
     background: url(../images/cont1_bg01_mobile.jpg) no-repeat center/cover;
   }
 
@@ -1811,7 +1820,7 @@ body {
   }
 
   .title .suggestion01 {
-    width: 420px;
+    width: 470px;
     font-size: 2.2rem;
     height: 60px;
   }
@@ -1912,7 +1921,7 @@ body {
   }
 
   .shapes_set .item07 {
-    bottom: 17%;
+    bottom: 12%;
     width: 85px;
     height: 69px;
   }
@@ -1933,20 +1942,20 @@ body {
   }
 
   .shapes_set .item11 {
-    bottom: 12%;
+    bottom: 8%;
     width: 111px;
     height: 181px;
   }
 
   .shapes_set .item12 {
-    bottom: 20%;
+    bottom: 13%;
     left: 4%;
     width: 81px;
     height: 101px;
   }
 
   .shapes_set .item13 {
-    top: 10%;
+    top: 8%;
     width: 64px;
     height: 70px;
   }

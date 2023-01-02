@@ -321,7 +321,4 @@ const swiper = new Swiper('.swiper ', {
     prevEl: ".swiper-button-prev"
   },
   pagination: true,
-  autoplay: {
-    delay: 2000
-  }
 });

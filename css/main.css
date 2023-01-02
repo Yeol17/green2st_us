@@ -1070,6 +1070,7 @@ body {
   margin: 0 auto;
   display: flex;
   position: relative;
+  left: -20px
 }
 
 .cont05 .title {
@@ -1249,7 +1250,7 @@ body {
 
 .cont06 .cont-area {
   position: absolute;
-  width: 30%;
+  width: 40%;
   height: 50%;
   top: 50%;
   left: 10%;
@@ -1312,6 +1313,12 @@ body {
   .logo a {
     top: 1%;
     left: 1%;
+  }
+
+  /* donation-btn */
+  .donation-btn--sticky {
+    width: 90%;
+    height: 50px;
   }
 
   /* VISUAL */
@@ -1587,6 +1594,11 @@ body {
     font-size: 1.5rem;
     padding-top: 10%;
   }
+
+  .cont06 .tit {
+    font-size: 1.8rem;
+    line-height: 1.3em;
+  }
   
 }
 
@@ -1601,6 +1613,9 @@ body {
   .wrap_fixed .pg_title {
     left: 2.5%;
   }
+
+  /* donation-btn */
+
 
   /* VISUAL */
 
@@ -1903,9 +1918,11 @@ body {
   .cont05 .title {
     font-size: 1.4rem;
     padding-top: 10%;
+    /* margin-left: -20px; */
   }
+  
   .howToList .item {
-    padding: 30px 20px;
+    padding: 40px;
   }
   .howToList .item h3 {
     font-size: 1.3em;
@@ -1914,55 +1931,63 @@ body {
   }
   .howToList .itm01:after {
     bottom: 0;
-    opacity: .3;
+    opacity: .2;
   }
   .howToList .itm02:after {
     width: 41%;
     height: 25%;
     bottom: 16px;
     right: 20px;
-    opacity: .3;
+    opacity: .2;
    }
   .howToList .itm03:after {
     width: 50%;
     height: 25%;
     bottom: 0;
-    opacity: .3;
+    opacity: .2;
    }
   .howToList .itm04:after {
     width: 50%;
     height: 31%;
     bottom: 20px;
-    opacity: .3;
+    opacity: .2;
    }
   .howToList .itm05:after {
     width: 50%;
     height: 30%;
     bottom: 20px;
-    opacity: .3;
+    opacity: .2;
    }
   .howToList .itm06:after {
     width: 50%;
     height: 30%;
     bottom: 10px;
-    opacity: .3;
+    opacity: .2;
    }
   .howToList .itm07:after {
     width: 50%;
     height: 30%;
     bottom: 20px;
-    opacity: .3;
+    opacity: .2;
    }
   .howToList .itm08:after {
     width: 50%;
     height: 30%;
     bottom: 10px;
-    opacity: .3;
+    opacity: .2;
    }
   .howToList .itm09:after {
     width: 50%;
     height: 30%;
     bottom: 20px;
-    opacity: .3;
+    opacity: .2;
    }
+   .cont06 .tit {
+    font-size: 1.4rem;
+    line-height: 1.4em;
+    color: #666;
+  }
+  .cont06 .cont-area {
+    display: none;
+  }
 }

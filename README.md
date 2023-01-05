@@ -15,7 +15,7 @@ https://yeol17.github.io/green_us/
 
 ## 제작방법
 
-![html,css,gsap](https://user-images.githubusercontent.com/97844334/210712756-c0879ce4-0875-4724-9716-65a6cfaccac4.jpg width="400px" height="150px")
+<img src="https://user-images.githubusercontent.com/97844334/210713701-bf34f2f7-24f2-466b-b761-53b3c70f9f1a.jpg" width="400px" height"150px">
 
 애니매이션 위주의 페이지이기 큰 화면에서 보는게 용이하다 생각해서 데스크탑에 최적화가 되어 제작 되었습니다.
 그 후 태블릿(767 ~ 1023), 모바일(~768) 사이즈에 맞게 반응형으로 조정했습니다.

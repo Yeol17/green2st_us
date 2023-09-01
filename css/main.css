@@ -82,7 +82,7 @@ body {
 }
 
 .rm5 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .mt-20 {
@@ -855,6 +855,7 @@ body {
 
 .shapes_set .item01 {
   z-index: 20;
+  width: 30vw;
   top: 0;
   left: 0;
   transform: translate(-100%, -100%);
@@ -862,6 +863,7 @@ body {
 
 .shapes_set .item02 {
   z-index: 30;
+  width: 100px;
   top: 4%;
   left: 34%;
   transform: translate(-130%, -200%);
@@ -871,6 +873,7 @@ body {
   z-index: 10;
   top: 0;
   left: 22%;
+  width: 40vw;
   transform: rotateY(90deg);
   transform: translate(0%, -150%);
 }
@@ -878,11 +881,13 @@ body {
 .shapes_set .item04 {
   z-index: 20;
   top: 5%;
+  width: 80px;
   right: 20.5%;
   transform: translate(50%, -200%);
 }
 
 .shapes_set .item05 {
+  width: 20vw;
   z-index: 9;
   top: 0;
   right: 0;
@@ -890,6 +895,7 @@ body {
 }
 
 .shapes_set .item06 {
+  width: 12vw;
   z-index: 10;
   top: 0;
   right: 0;
@@ -897,6 +903,7 @@ body {
 }
 
 .shapes_set .item07 {
+  width: 150px;
   z-index: 20;
   bottom: 36%;
   right: 1%;
@@ -904,6 +911,7 @@ body {
 }
 
 .shapes_set .item08 {
+  width: 30vw;
   z-index: 10;
   bottom: 0;
   right: 0;
@@ -911,6 +919,7 @@ body {
 }
 
 .shapes_set .item09 {
+  height: 40vh;
   z-index: 9;
   bottom: 0;
   left: 5%;
@@ -918,6 +927,7 @@ body {
 }
 
 .shapes_set .item10 {
+  width: 30vw;
   z-index: 10;
   bottom: 0;
   left: 0;
@@ -925,6 +935,7 @@ body {
 }
 
 .shapes_set .item11 {
+  width: 10vw;
   z-index: 0;
   bottom: 20%;
   left: 0;
@@ -935,15 +946,16 @@ body {
   height: 27%;
   z-index: 10;
   bottom: 40%;
-  left: 2%;
+  left: 4%;
   transform: rotateY(5deg);
   transform: translate(-150%, 0%);
 }
 
 .shapes_set .item13 {
+  width: 90px;
   z-index: 20;
   top: 18%;
-  left: 4%;
+  /* left: 4%; */
   transform: rotateY(180deg);
   transform: translate(-150%, -150%);
 }
@@ -969,7 +981,7 @@ body {
 
 .cont04 .txt-area {
   display: flex;
-  font-size: 4rem;
+  font-size: 3.0rem;
   text-align: center;
   z-index: 2;
 

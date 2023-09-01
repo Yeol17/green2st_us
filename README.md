@@ -2,8 +2,6 @@
 
 <br>
 
-[KDT]PBT Front-end Developer Course - 2nd Project
-
 https://yeol17.github.io/weourus
 
 <br>

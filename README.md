@@ -6,6 +6,8 @@ https://yeol17.github.io/weourus
 
 유니세프 랜딩페이지를 똑같이 구현해보기
 
+<img src="https://github.com/Yeol17/weourus/assets/97844334/a580a85c-e9a2-4984-afe6-153b5bb91e8a" width="500px" />
+
 <br>
 
 **개요**

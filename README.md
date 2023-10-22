@@ -1,10 +1,9 @@
-# 유니세프 랜딩페이지 클론
-
+# 기후 변화
 <br>
 
 https://yeol17.github.io/weourus
 
-유니세프 랜딩페이지를 똑같이 구현해보기
+스크롤 기반 애니메이션 페이지
 
 <img src="https://github.com/Yeol17/weourus/assets/97844334/a580a85c-e9a2-4984-afe6-153b5bb91e8a" width="500px" />
 
@@ -14,12 +13,6 @@ https://yeol17.github.io/weourus
 ---
 - 개인 프로젝트
 - 약 14일
-
-프로젝트 목적
----
-1. 스크롤 기반의 애니메이션 페이지 만들어 보기
-2. CSS 숙련도 향상
-3. GSAP 라이브러리를 활용해 보기
 
 <br>
 

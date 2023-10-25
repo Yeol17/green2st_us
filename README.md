@@ -9,16 +9,7 @@ https://yeol17.github.io/weourus
 
 <br>
 
-**개요**
----
-- 개인 프로젝트
-- 약 14일
-
-<br>
-
 ## Skills
 
 <img src="https://user-images.githubusercontent.com/97844334/210713701-bf34f2f7-24f2-466b-b761-53b3c70f9f1a.jpg" width="400" height="150"></img>
 
-## 개발 내용
-스크롤 액션 기반의 웹페이지
